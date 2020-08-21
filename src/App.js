@@ -1,7 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
+import Layout from "./hoc/Layout";
+import ToDoList from "./containers/ToDoList/ToDoList";
 
-function App() {
-  return <h1>Title</h1>;
+class App extends Component {
+  render() {
+    return (
+      <Layout>
+        <ToDoList />
+      </Layout>
+    );
+  }
 }
 
 export default App;
