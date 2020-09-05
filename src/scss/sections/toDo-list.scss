@@ -1,2 +1,76 @@
 // toDo section
-// .toDo-section {}
+.toDo-section {
+  max-width: 600px;
+  border: 1px solid #e6e6e6;
+  padding: 20px;
+}
+
+// todo list
+.todo-list {
+  .todo-item {
+    margin: 0 0 10px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+//todo item
+.todo-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px;
+  background: #41c6d7;
+  border-radius: 4px;
+  transition: background .3s;
+
+  &--done {
+    background: #41d77a;
+
+    .todo-item__button--check {
+      color: $green;
+    }
+  }
+
+  &__text {
+    margin: 0 10px 0 0;
+  }
+
+  &__buttons-wrapper {
+    margin: 0 0 0 auto;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 6px;
+    margin: 0 6px 0 0;
+    background: #e6e6e6;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 0 4px 0 rgba(black, 0.3);
+    transition: background .3s, color .3s;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background: #c5c5c5;
+    }
+
+    &--check:hover {
+      color: $green;
+    }
+
+    &--delete:hover {
+      color: $red;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
